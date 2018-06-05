@@ -1,6 +1,5 @@
 namespace MoneyApp.Migrations
 {
-    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -10,16 +9,11 @@ namespace MoneyApp.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(MoneyApp.Models.MoneyAppModel context)
         {
-            context.User.AddOrUpdate(
-                    x => x.username,
-                    new User { username = "hyg1997", password = "123456", name = "Hugo Andrés", lastname = "Yupanqui Gómez" },
-                    new User { username = "saintplay", password = "123456", name = "Diego Alfredo", lastname = "Jara Palomino" }
-                );
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
